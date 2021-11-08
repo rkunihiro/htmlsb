@@ -1,0 +1,13 @@
+/.idea
+/.vscode
+
+/.parcel-cache
+/dist
+/node_modules
+
+*.log
+*.swp
+
+.DS_Store
+._*
+Thumb.db

@@ -1,0 +1,48 @@
+{
+    "name": "htmlsb",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@markuplint/jsx-parser": "^0.3.2-beta.1",
+        "@parcel/transformer-sass": "^2.0.0",
+        "@typescript-eslint/eslint-plugin": "^5.3.0",
+        "@typescript-eslint/parser": "^5.3.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-react": "^7.26.1",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "markuplint": "^1.11.4",
+        "npm-run-all": "^4.1.5",
+        "parcel": "^2.0.0",
+        "prettier": "^2.4.1",
+        "stylelint": "^14.0.1",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-property-sort-order-smacss": "^8.0.0",
+        "stylelint-config-standard-scss": "^2.0.1",
+        "typescript": "^4.4.4"
+    },
+    "dependencies": {
+        "@types/react": "^17.0.34",
+        "@types/react-dom": "^17.0.11",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "scripts": {
+        "clean": "rm -rf ./dist",
+        "build": "parcel build './src/**/*.html'",
+        "dev": "parcel serve './src/**/*.html'",
+        "lint": "run-s lint:*",
+        "lint:eslint": "eslint ./src",
+        "lint:tsc": "tsc -p .",
+        "lint:stylelint": "stylelint './**/*.scss'",
+        "lint:markuplint": "markuplint './src/**/*.html' './src/**/*.tsx'",
+        "lint:prettier": "prettier ./src --list-different",
+        "fix": "run-s fix:*",
+        "fix:eslint": "eslint ./src --fix",
+        "fix:stylelint": "stylelint './**/*.scss' --fix",
+        "fix:prettier": "prettier ./src --write"
+    }
+}
