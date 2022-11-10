@@ -2,14 +2,14 @@
     "compilerOptions": {
         // "incremental": true,
         // "composite": true,
-        // "tsBuildInfoFile": "./",
+        // "tsBuildInfoFile": "./.tsbuildinfo",
         // "disableSourceOfProjectReferenceRedirect": true,
         // "disableSolutionSearching": true,
         // "disableReferencedProjectLoad": true,
 
-        "target": "esnext",
-        "lib": ["esnext", "dom"],
-        "jsx": "preserve",
+        "target": "es2021",
+        "lib": ["es2021", "dom"],
+        "jsx": "react-jsx",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         // "jsxFactory": "",
@@ -18,21 +18,23 @@
         // "reactNamespace": "",
         // "noLib": true,
         // "useDefineForClassFields": true,
+        // "moduleDetection": "auto",
 
         "module": "commonjs",
+        "rootDir": "./",
         "moduleResolution": "node",
-        "rootDir": "./src",
         "baseUrl": "./src",
         "paths": {},
         // "rootDirs": [],
         // "typeRoots": [],
         // "types": [],
         // "allowUmdGlobalAccess": true,
+        // "moduleSuffixes": [],
         // "resolveJsonModule": true,
         // "noResolve": true,
 
-        // "allowJs": true,
-        // "checkJs": true,
+        "allowJs": true,
+        "checkJs": true,
         // "maxNodeModuleJsDepth": 1,
 
         // "declaration": true,
@@ -40,7 +42,7 @@
         // "emitDeclarationOnly": true,
         // "sourceMap": true,
         // "outFile": "./",
-        "outDir": "./dist",
+        // "outDir": "./",
         // "removeComments": true,
         "noEmit": true,
         // "importHelpers": true,
@@ -57,6 +59,7 @@
         // "noEmitOnError": true,
         // "preserveConstEnums": true,
         // "declarationDir": "./",
+        // "preserveValueImports": true,
 
         // "isolatedModules": true,
         // "allowSyntheticDefaultImports": true,
@@ -88,5 +91,5 @@
         "skipLibCheck": true
     },
     "include": ["./src"],
-    "exclude": ["./dist", "node_modules"]
+    "exclude": ["node_modules", "./dist"]
 }
