@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { ReactElement, StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-const container = document.getElementById("container");
-
-function App(): React.ReactElement {
+function App(): ReactElement {
     return (
-        <>
+        <StrictMode>
             <div>Hello,World!</div>
-        </>
+        </StrictMode>
     );
 }
 
-ReactDOM.render(<App />, container);
+const container = document.getElementById("container");
+if (container) {
+    createRoot(container).render(<App />);
+}
