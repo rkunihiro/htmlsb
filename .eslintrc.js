@@ -1,11 +1,12 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-    // env: {
-    //     browser: true,
-    //     commonjs: true,
-    //     es6: true,
-    //     node: true,
-    // },
+    root: true,
+    env: {
+        browser: true,
+        // commonjs: true,
+        // es6: true,
+        // node: true,
+    },
     plugins: [
         //
         "@typescript-eslint",
@@ -35,9 +36,16 @@ module.exports = {
         "prettier",
     ],
     rules: {
+        "curly": "error",
+        "eqeqeq": "warn",
         // "no-console": "warn",
         "no-else-return": "error",
-        "curly": "error",
+
         "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
     },
+    ignorePatterns: [
+        //
+        "node_modules",
+    ],
 };
